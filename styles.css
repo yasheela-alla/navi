@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+/* CSS styles for overlay */
 .overlay {
     position: absolute;
     top: 100px; /* Adjust position as needed */
