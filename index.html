@@ -5,68 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Old Computer 3D Model</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <script>
-        // Setup Three.js scene
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        // Load 3D model
-        const loader = new THREE.GLTFLoader();
-        loader.load('models/old_computer.glb', function (gltf) {
-            const model = gltf.scene;
-            scene.add(model);
-        });
-
-        // Camera positioning
-        camera.position.z = 5;
-
-        // Render loop
-        function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
-</body>
-</html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <style>
-        /* CSS styles for overlay */
-        .overlay {
-            position: absolute;
-            top: 100px; /* Adjust position as needed */
-            left: 100px; /* Adjust position as needed */
-            width: 600px; /* Adjust size as needed */
-            height: 400px; /* Adjust size as needed */
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            padding: 20px;
-            display: none; /* Hide initially */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Your 3D model and other content here -->
+<!-- Three.js 3D Model Rendering -->
+<script src="script.js"></script>
+
+<!-- Your HTML content for overlay and other elements -->
 <div id="computerScreen">
     <!-- Replace this with your actual 3D model embedding code -->
+    <!-- Iframe placeholder -->
     <iframe src="https://sketchfab.com/models/your_model_id/embed" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
 </div>
 
@@ -80,6 +29,5 @@
     </pre>
 </div>
 
-<script src="script.js"></script> 
 </body>
 </html>
