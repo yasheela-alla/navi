@@ -1,11 +1,18 @@
-.overlay {
-    position: absolute;
-    top: 100px; /* Adjust position as needed */
-    left: 100px; /* Adjust position as needed */
-    width: 600px; /* Adjust size as needed */
-    height: 400px; /* Adjust size as needed */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 20px;
-    display: none; /* Hide initially */
-}
+// Wait for the document to fully load before running JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the computer screen element
+    const computerScreen = document.getElementById('computerScreen');
+    
+    // Add click event listener to computer screen
+    computerScreen.addEventListener('click', function() {
+        // Get the overlay element
+        const overlay = document.getElementById('powershellCommands');
+        
+        // Toggle display of overlay
+        if (overlay.style.display === 'block') {
+            overlay.style.display = 'none'; // Hide if already visible
+        } else {
+            overlay.style.display = 'block'; // Show if hidden
+        }
+    });
+});
