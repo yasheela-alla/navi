@@ -3,10 +3,6 @@ body {
     overflow: hidden;
 }
 
-canvas {
-    display: block;
-}
-
 /* CSS styles for overlay */
 .overlay {
     position: absolute;
