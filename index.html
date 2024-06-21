@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Old Computer 3D Model</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Yasheela's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Three.js 3D Model Rendering -->
-<div id="computerScreen">
-    <!-- Replace this with your actual 3D model embedding code -->
-    <!-- Example iframe placeholder -->
-    <iframe src="https://sketchfab.com/models/your_model_id/embed" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
-</div>
-
-<!-- PowerShell Commands Overlay -->
-<div class="overlay" id="powershellCommands">
-    <pre>
-        PS C:\Users\YASHEELA\navi> help
-        PS C:\Users\YASHEELA\navi> ls
-        PS C:\Users\YASHEELA\navi> cd ..
-        PS C:\Users\YASHEELA> ...
-    </pre>
-</div>
-
-<script src="script.js"></script>
+    <div id="error-message">Oops! Something went wrong...</div>
+    <div id="gotcha-message">Haha gotcha, I'm just kidding!</div>
+    <div id="container">
+        <div id="character">
+            <!-- 3D Character will go here -->
+        </div>
+        <div id="computer">
+            <div id="screen">
+                <p>Hi there, I'm Yasheela</p>
+                <p>Undergraduate</p>
+                <p>Aspiring Network Engineer</p>
+                <p>Type 'help' to get started</p>
+                <div id="output"></div>
+                <input type="text" id="command-input" placeholder="Type a command">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
