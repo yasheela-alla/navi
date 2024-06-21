@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const commandInput = document.getElementById("command-input");
     const output = document.getElementById("output");
 
-    // Display error message
-    errorMessage.style.display = "block";
-
     // Show gotcha message after 2 seconds
     setTimeout(() => {
         errorMessage.style.display = "none";
@@ -18,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         gotchaMessage.style.display = "none";
         container.style.display = "block";
+        init3DCharacter(); // Initialize the 3D character
     }, 4000);
 
     // Handle command input
@@ -44,25 +42,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 output.innerHTML = `Command not found: ${command}`;
         }
     }
+
+    function init3DCharacter() {
+        // Set up the scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('character').appendChild(renderer.domElement);
+
+        // Load 3D model (Assuming you have a .glb or .gltf model of Navi)
+        const loader = new THREE.GLTFLoader();
+        loader.load('path_to_your_model.glb', function(gltf) {
+            scene.add(gltf.scene);
+            animate();
+        });
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+    }
 });
-
-// Include this inside your DOMContentLoaded event listener in script.js
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('character').appendChild(renderer.domElement);
-
-// Load 3D model (Assuming you have a .glb or .gltf model of the character)
-const loader = new THREE.GLTFLoader();
-loader.load('path_to_your_model.glb', function(gltf) {
-    scene.add(gltf.scene);
-    animate();
-});
-
-camera.position.z = 5;
-
-function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-}
