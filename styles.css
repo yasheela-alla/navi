@@ -18,16 +18,16 @@ body {
 }
 
 #error-message {
-    display: none;
+    display: block; /* Initially visible */
 }
 
 #gotcha-message {
-    display: none;
+    display: none; /* Initially hidden */
     color: green;
 }
 
 #container {
-    display: none;
+    display: none; /* Initially hidden */
     text-align: center;
 }
 
