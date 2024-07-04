@@ -3,14 +3,15 @@
 
 ##   Hi there, 
 
-#  *I'm Ed H*
+#  *I'm yash*
 
-##   • Software Engineer
-##   • Digital Designer
-
-
+##   • Undergraduate
+##   • 3D enthusiast
 
 
 
-### Welcome to ED-Linux 1.0 LTS
+
+
+### Welcome to MY NAVI
+### PS: Navi translates to computer in my fav anime
 ### →→ Scroll or type "help" to get started
