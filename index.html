@@ -5,9 +5,7 @@
     <title>Yasheela Alla – Personal Website</title>
     <meta
       name="description"
-      content="My
-    name is Yasheela and I am an undergrad, majoring in electronic at VIIT. I have a passion for all things technology and design, from
-    network engineering & Cyber Security to 3D graphics."
+      content="My name is Yasheela and I am an undergrad, majoring in electronic at VIIT. I have a passion for all things technology and design, from network engineering & Cyber Security to 3D graphics."
     />
 
     <link rel="icon" type="image/png" href="/icon/32x32.png" />
@@ -34,12 +32,14 @@
     <meta property="og:image" content="https://edwardh.io/icon/og-img1.png" />
     <meta
       name="og:description"
-      content="My
-    name is Yasheela and I am an undergrad, majoring in electronic at VIIT. I have a passion for all things technology and design, from
-    network engineering & Cyber Security to 3D graphics."
+      content="My name is Yasheela and I am an undergrad, majoring in electronic at VIIT. I have a passion for all things technology and design, from network engineering & Cyber Security to 3D graphics."
     />
     <link rel="manifest" href="/manifest.json" />
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- Three.js and GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.139.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.139.2/examples/js/loaders/GLTFLoader.js"></script>
   </head>
 
   <body>
@@ -115,15 +115,12 @@
       <section>
         <h1 id="aboutMe">Hi there</h1>
         <p>
-         My
-    name is Yasheela and I am an undergrad, majoring in electronic at VIIT. I have a passion for all things technology and design, from
-    network engineering & Cyber Security to 3D graphics.
+          My name is Yasheela and I am an undergrad, majoring in electronics at VIIT. I have a passion for all things technology and design, from network engineering & Cyber Security to 3D graphics.
         </p>
         <p>
           In addition to my love of technology and design, I am also interested
           in arts, history, music and volunteering.
         </p>
-
         <p>
           This represents just a small selection of the projects I have worked
           on over the years. I have many more pieces of personal, university and
@@ -164,6 +161,7 @@
       </div>
       <div>COPYRIGHT © 2022-2024 Edward Hinrichsen.</div>
     </footer>
+
     <script>
       function closeMenu() {
         document.getElementsByTagName("nav")[0].classList.remove(["active"]);
@@ -178,6 +176,34 @@
         }
       }
     </script>
+
+    <!-- GLB Viewer Script -->
+    <script>
+      let scene, camera, renderer;
+      init();
+      function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const loader = new THREE.GLTFLoader();
+        loader.load("Commodore710_33.5.glb", function (gltf) {
+          scene.add(gltf.scene);
+          renderer.render(scene, camera);
+        });
+
+        camera.position.z = 5;
+        animate();
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+      }
+    </script>
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-NGHQL33BC7"
