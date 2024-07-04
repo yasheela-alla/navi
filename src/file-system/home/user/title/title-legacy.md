@@ -2,14 +2,12 @@
 
 
 
-## Welcome to ED-Linux 1.0 LTS
+## Welcome to MY NAVI
 
 
 
 #  Hi there,
-#  *I'm Edward*
-#  -Creative Developer
-##     — Computer Science graduate of
-##        the University of Melbourne
-##
+#  *I'm Yash*
+#  -Curious Artist
+##     — Ungraduate Electronics
 ###   *Scroll* or type "help" to get started
