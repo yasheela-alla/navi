@@ -3,7 +3,7 @@
 
 
 # Help
-### EDSH is just like BASH except much more limited.
+### MY NAVI just like BASH except much more limited.
 
 ## • Type*ls* to list directory contents
 
